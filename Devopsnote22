@@ -1,0 +1,73 @@
+Job search site
+                                                www.dice.com
+
+
+
+
+
+						Date and Time Zone 
+Date/time:date
+List all Time Zone: timedatectl
+Set time zone command: sudo timedatectl set-timezone "America/New_York
+______________________________________________________________________________________________________________________
+						creating a main directory with subdirectories
+mkdir -pv dev/git/maven/aws/nexus/java or
+mkdir -p names/(john,tom,bob)
+						creating a file with sub files
+touch mercedesbenz/sedan/suv/truck/evs
+______________________________________________________________________________________________________________________
+
+						Flags
+                                        -e = selects on processes on a system, regardless of wether they are associated with the current users terminal session
+					-v = verbose mode (gives notification of task complete)
+					-r= delete
+					-i = interactive
+					-p = creates directories including the parent directory
+					-a = do not ignor hidden files
+                                        -f = displays full formating list of the process including process ID (PID), Parent Process ID(PPID), CPU, Memory usage, start time, command names
+______________________________________________________________________________________________________________________
+
+				           User Management 
+
+Add user: sudo adduser name or
+          sudo -u / adduser name or
+______________________________________________________________________________________________________________________
+	  
+
+					Granting sudoers access
+
+sudo vi /etc/sudoers   or
+sudo echo "userName ALL=(ALL) NOPASSWD:ALL"\sudo tee /etc/sudoers.d/userName
+________________________________________________________________________________________________________________________
+					Password related commands
+
+sudo passwd userName = create password
+
+
+*****sudo vi /etc/passwd = you can use this command to change the shell of a user. Reason behind this is, sometimes when switching from ec2-user to another user or host name for example when you do 
+sudo su - jenkins, then you say
+whoami, it still states that you are ec2-user instead of jenkins. This is because the password shell for the user is listed as /bin/false. It is supposed to be /bin/bash. You use the command sudo vi /etc/passwd to edit the specific shell for the user you want.
+
+
+cat/etc/shadow = detail information about user password
+cat/etc/pass= detail information about user
+cat/etc/passwds = detail info about user passwords
+/etc/ssh/sshd_config= ssh configuration details
+grep -i simon/etc/passwd= greps all individuals withe name simon, passwords
+cat list | grep -i simon
+_____________________________________________________________________________________________________________________________
+
+						Switching from one user to another:
+
+
+ sudo su - NewuserName    -----when you are done with this user and you want to return to ec2-user you can siply type exit
+ su - root
+ su -
+sudo -i = swithes you back to root user- but will ask for your password 
+su = ec2user
+_____________________________________________________________________________________________________________________
+
+						To modify a user account
+sudo usermod= modifies user account
+						
+___________________________________________________________________________
